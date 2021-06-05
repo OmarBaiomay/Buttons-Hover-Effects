@@ -5,6 +5,31 @@
     box-sizing: border-box;
 }
 
+/************************** Responsive Breakpoints ************************/
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+    .button_container{
+        width: 50%;
+    }
+}
+
+
+/* Small devices (landscape phones, less than 767px) */
+@media (max-width: 767.8px) {
+    .button_container{
+        width: 50%;
+    }
+}  
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .button_container{
+        width: 100%;
+    }
+
+}
+
 .container{
     max-width: 90%;
     margin: 0 auto;
@@ -188,5 +213,103 @@
                 }
             }
         }
+
+        .button_container-3{
+            background-color: #0c002b;
+            
+            .button-3{
+                color: #1670f0;
+                box-shadow: 0 20px 50px rgb(0 0 0 / 50%);
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    bottom: 2px;
+                    width: 50%;
+                    height: 100%;
+                    background-color: rgba(255,255,255,0.05);
+                    z-index: -1;
+                }
+                span{
+                    position: absolute;
+                
+                    &:nth-child(1){
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(to right, #0c002b, #1779ff);
+                        animation: btn3_animat_1 2s linear infinite;
+                    }
+
+                    &:nth-child(2){
+                        top: 0;
+                        right: 0;
+                        width: 2px;
+                        height: 100%;
+                        background: linear-gradient(to bottom, #0c002b, #1779ff);
+                        animation: btn3_animat_2 2s linear infinite;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-child(3){
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(to left, #0c002b, #1779ff);
+                        animation: btn3_animat_3 2s linear infinite;
+                    }
+
+                    &:nth-child(4){
+                        bottom: 0;
+                        left: 0;
+                        width: 2px;
+                        height: 100%;
+                        background: linear-gradient(to top, #0c002b, #1779ff);
+                        animation: btn3_animat_4 2s linear infinite;
+                        animation-delay: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes btn3_animat_1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes btn3_animat_2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes btn3_animat_3 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes btn3_animat_4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
     }
 }
