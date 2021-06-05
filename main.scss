@@ -1,0 +1,30 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    h1{
+        margin: 2em 0;
+    }
+
+    .buttons_area{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .button_container{
+            width: 32%;
+            height: 15em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 7px 6px 15px 0px rgb(0 0 0 / 25%)
+        }
+    }
+}
