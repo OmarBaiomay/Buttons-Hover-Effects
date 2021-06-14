@@ -418,6 +418,50 @@ body {
           box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2169f3;
 }
 
+.container .buttons_area .button_container-6 {
+  background-color: #031321;
+}
+
+.container .buttons_area .button_container-6 .button-6 {
+  color: #FFF;
+  background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffed3b), to(#03a9f4));
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffed3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.container .buttons_area .button_container-6 .button-6::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffed3b), to(#03a9f4));
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffed3b, #03a9f4);
+  background-color: #f441a5;
+  background-size: 400%;
+  border-radius: 40px;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .buttons_area .button_container-6 .button-6:hover {
+  -webkit-animation: bnt_6_animate 8s linear infinite;
+          animation: bnt_6_animate 8s linear infinite;
+}
+
+.container .buttons_area .button_container-6 .button-6:hover::before {
+  -webkit-animation: bnt_6_animate 8s linear infinite;
+          animation: bnt_6_animate 8s linear infinite;
+}
+
 @-webkit-keyframes btn3_animat_1 {
   0% {
     -webkit-transform: translateX(-100%);
@@ -525,6 +569,24 @@ body {
   100% {
     -webkit-transform: translate(-50%, -75%) rotate(360deg);
             transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bnt_6_animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+@keyframes bnt_6_animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
   }
 }
 /*# sourceMappingURL=main.css.map */
